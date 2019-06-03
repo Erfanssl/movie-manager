@@ -1,0 +1,33 @@
+.dashboard__container {
+  height: 80vh;
+}
+
+.dashboard__btn {
+  font-size: 1.3rem;
+  height: 10rem;
+  width: 20rem;
+  margin-top: 2rem;
+  padding-top: 3.8rem !important;
+}
+
+.dashboard__text--one {
+  font-size: 2rem;
+}
+
+.dashboard__text--two {
+  font-size: 1.5rem;
+}
+
+.sss {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    padding: 0;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px 10px 2px 2px;
+    background: rgba(0,0,0,0.25);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+}
