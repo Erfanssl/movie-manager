@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
+import { toast } from "react-toastify";
 
 class MTVForm extends Component {
     constructor(props) {
@@ -87,7 +88,7 @@ class MTVForm extends Component {
             const data = { mtv: [formData] };
             localStorage.setItem('Movie Manager', JSON.stringify(data));
         }
-
+        toast.success('You successfully added a new movie!');
         this.props.history.push('/movies-to-watch');
     }
 

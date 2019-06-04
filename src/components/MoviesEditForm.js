@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MoviesFormItem from './MoviesFormItem';
+import { toast } from "react-toastify";
 
 class MoviesEditForm extends Component {
     constructor(props) {
@@ -294,6 +295,7 @@ class MoviesEditForm extends Component {
             localStorage.setItem('Movie Manager', JSON.stringify(data));
         }
 
+        toast.success('You successfully edited your database!');
         this.props.history.push('/movies');
     }
 

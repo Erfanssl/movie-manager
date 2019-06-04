@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
+import { ToastContainer } from "react-toastify";
 import Header from './components/Header';
 import Help from './components/Help';
 import Contact from './components/Contact';
@@ -14,12 +15,14 @@ import MoviesEditForm from './components/MoviesEditForm';
 import Top10 from './components/Top10';
 import Worst10 from './components/Worst10';
 import Documentation from './components/Documentation';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Main extends Component {
     render() {
         return (
             <React.Fragment>
                 <Header />
+                <ToastContainer />
                 <Switch>
                     <Route path="/contact" component={ Contact }/>
                     <Route path="/help" component={ Help }/>

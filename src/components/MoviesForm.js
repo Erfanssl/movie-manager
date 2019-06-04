@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
 import MoviesFormItem from './MoviesFormItem';
+import { toast } from "react-toastify";
 
 class MoviesForm extends Component {
     constructor(props) {
@@ -288,6 +289,7 @@ class MoviesForm extends Component {
             const data = { db: [this.state] };
             localStorage.setItem('Movie Manager', JSON.stringify(data));
         }
+        toast.success('You successfully added a new movie!');
         this.props.history.push('/movies');
     }
 

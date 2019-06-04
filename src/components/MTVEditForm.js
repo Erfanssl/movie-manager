@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { toast } from "react-toastify";
 
 class MTVEditForm extends Component {
     constructor(props) {
@@ -73,6 +74,7 @@ class MTVEditForm extends Component {
         });
         parsedData.mtv.sort((a, b) => b.priority - a.priority );
         localStorage.setItem('Movie Manager', JSON.stringify(parsedData));
+        toast.success('You successfully edited your MtW list!');
         this.props.history.push('/movies-to-watch');
     }
 
