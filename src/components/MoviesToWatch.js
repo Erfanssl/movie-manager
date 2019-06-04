@@ -27,10 +27,14 @@ class MoviesToWatch extends Component {
             } else {
                 document.querySelector('.no-data').classList.add('d-flex');
                 document.querySelector('.movies-to-watch__table').classList.add('d-none');
+                document.querySelector('.mtv__search-text').classList.add('d-none');
+                document.querySelector('.movies-to-watch__search-box').classList.add('d-none');
             }
         } else {
             document.querySelector('.no-data').classList.add('d-flex');
             document.querySelector('.movies-to-watch__table').classList.add('d-none');
+            document.querySelector('.mtv__search-text').classList.add('d-none');
+            document.querySelector('.movies-to-watch__search-box').classList.add('d-none');
         }
     }
 
@@ -48,6 +52,8 @@ class MoviesToWatch extends Component {
         if (this.state.mtv.length === 0) {
             document.querySelector('.no-data').classList.add('d-flex');
             document.querySelector('.movies-to-watch__table').classList.add('d-none');
+            document.querySelector('.mtv__search-text').classList.add('d-none');
+            document.querySelector('.movies-to-watch__search-box').classList.add('d-none');
         }
     }
 
@@ -76,7 +82,7 @@ class MoviesToWatch extends Component {
         return (
             <div className="movies-to-watch container mt-5">
                 <Link to="/mtv-form" className="btn btn-primary mtv__btn--add-new mb-2">Add New Movie</Link>
-                <span className="ml-3 mr-2">Or Search:</span>
+                <span className="ml-3 mr-2 mtv__search-text">Or Search:</span>
                 <input onChange={ this.handleSearch } type="text" className="form-control form-inline mb-2 movies-to-watch__search-box" placeholder="Search among the movies you want to watch"/>
                 <div className="no-data border border-danger rounded-lg bg-glass py-5 pt-4 d-none my-3 align-items-center justify-content-center text-center px-1">
                     <p>

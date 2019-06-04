@@ -33,12 +33,17 @@ class Movies extends Component {
                 document.querySelector('.no-data').classList.add('d-flex');
                 document.querySelector('.movies__table').classList.add('d-none');
                 document.querySelector('.movies__left-type').classList.remove('d-flex');
-                document.querySelector('.movies__left-type').classList.add('d-none');            }
+                document.querySelector('.movies__left-type').classList.add('d-none');
+                document.querySelector('.movies__search-box').classList.add('d-none');
+                document.querySelector('.movies__search-text').classList.add('d-none');
+            }
         } else {
             document.querySelector('.no-data').classList.add('d-flex');
             document.querySelector('.movies__table').classList.add('d-none');
             document.querySelector('.movies__left-type').classList.remove('d-flex');
-            document.querySelector('.movies__left-type').classList.add('d-none');        }
+            document.querySelector('.movies__left-type').classList.add('d-none');
+            document.querySelector('.movies__search-box').classList.add('d-none');
+            document.querySelector('.movies__search-text').classList.add('d-none');}
     }
 
     handleDelete(id, index, postsPerPage) {
@@ -64,6 +69,8 @@ class Movies extends Component {
             document.querySelector('.movies__left-type').classList.remove('d-flex');
             document.querySelector('.movies__left-type').classList.add('d-none');
         }
+        document.querySelector('.movies__search-box').classList.add('d-none');
+        document.querySelector('.movies__search-text').classList.add('d-none');
     }
 
     handlePagination(page) {
@@ -110,8 +117,8 @@ class Movies extends Component {
                     <div className="col-9 ml-auto">
                         <div className="movie__above-table">
                             <Link to="/movies-form" className="btn btn-primary movies__btn--add-new p-2 mb-2">Add New Movie</Link>
-                            <span className="ml-3 mr-2">Or Search:</span>
-                            <input onChange={ this.handleSearch } type="text" className="form-control  mb-2 movies__search-box" placeholder="Search in your Database"/>
+                            <span className="ml-3 mr-2 movies__search-text">Or Search:</span>
+                            <input onChange={ this.handleSearch } type="text" className="form-control mb-2 movies__search-box" placeholder="Search in your Database"/>
                         </div>
                     </div>
                 </div>
