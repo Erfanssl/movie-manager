@@ -148,7 +148,7 @@ class Movies extends Component {
                                aria-selected="false">Legendary</a>
                         </div>
                     </div>
-                    <div className="col-9">
+                    <div className="col-9 ml-auto">
                         <div className="no-data border border-danger rounded-lg bg-glass py-5 pt-4 d-none my-3 align-items-center justify-content-center">
                             <p>
                                 There is no movie in your "Movie Database"
