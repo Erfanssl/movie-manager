@@ -33,7 +33,7 @@ module.exports = (env) => {
         ],
         devtool: isProduction ? "source-map" : "inline-source-map",
         devServer: {
-            contentBase: path.resolve(__dirname, 'public', 'dist'),
+            contentBase: path.resolve(__dirname, 'public'),
             historyApiFallback: true
         }
     }

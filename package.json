@@ -6,7 +6,9 @@
   "scripts": {
     "serve": "webpack-dev-server --open",
     "build": "webpack --mode development",
-    "prod": "webpack --mode production"
+    "prod": "webpack --mode production",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run prod"
   },
   "keywords": [
     "Movie",
@@ -31,6 +33,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
