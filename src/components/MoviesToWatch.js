@@ -39,11 +39,17 @@ class MoviesToWatch extends Component {
         }
     }
 
-    handleDelete(id) {
-        const mtv = this.state.mtv.filter(item => item.id !== id);
-        this.setState(() => ({
-            mtv
-        }));
+    handleDelete(id, index, postsPerPage) {
+        const mtv = this.state.db.filter(item => item.id !== id);
+        if (index === 0 && Math.ceil((this.state.db.length - 1) / postsPerPage) < this.state.currentPage ) {
+            this.setState((prevState) => ({
+                mtv, currentPage: prevState.currentPage - 1
+            }));
+        } else {
+            this.setState(() => ({
+                mtv
+            }));
+        }
         toast.success('You successfully deleted a movie!');
     }
 
@@ -77,7 +83,7 @@ class MoviesToWatch extends Component {
     render() {
         const { mtv, search } = this.state;
         const searchedData = mtv.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
-        const data = Pagination(searchedData, 5, this.state.currentPage);
+        const data = Pagination(searchedData, 10, this.state.currentPage);
         const pages = new Array(data.pages).fill('');
         const mtvData = data.data;
 
@@ -101,7 +107,7 @@ class MoviesToWatch extends Component {
                     </tr>
                     </thead>
                     <tbody>
-                    { mtvData.map((item) => (
+                    { mtvData.map((item, index) => (
                             <MTVItem
                                 key={ item.id }
                                 id={ item.id }
@@ -109,7 +115,7 @@ class MoviesToWatch extends Component {
                                 currentPage={ this.state.currentPage }
                                 mtv={ this.state.mtv }
                                 priority={ item.priority }
-                                onDelete={ () => this.handleDelete(item.id) }
+                                onDelete={ () => this.handleDelete(item.id, index, "10") }
                             />
                         ))}
                     </tbody>

@@ -109,7 +109,7 @@ class Movies extends Component {
         const searchedData = typeFilter.filter(item => item.title.val.toLowerCase().includes(search.toLowerCase()));
         if (sort === 'IMDB') searchedData.sort((a, b) => b.IMDB.val - a.IMDB.val);
         else if (sort === 'myRating') searchedData.sort((a, b) => b.myRating - a.myRating);
-        const data = Pagination(searchedData, 2, this.state.currentPage);
+        const data = Pagination(searchedData, 10, this.state.currentPage);
         const pages = new Array(data.pages).fill('');
         let dbData = data.data;
 
@@ -184,8 +184,8 @@ class Movies extends Component {
                                     IMDB={ item.IMDB.val }
                                     myRating={ item.myRating }
                                     currentPage={ this.state.currentPage }
-                                    numberOfPages="2"
-                                    onDelete={ () => this.handleDelete(item.id, index, 2) }
+                                    numberOfPages="10"
+                                    onDelete={ () => this.handleDelete(item.id, index, 10) }
                                     onEdit={ true }
                                 />
                             ))}
