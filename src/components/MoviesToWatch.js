@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import MTVItem from './MTVItem';
 import Pagination from './Pagination';
 
@@ -43,6 +44,7 @@ class MoviesToWatch extends Component {
         this.setState(() => ({
             mtv
         }));
+        toast.success('You successfully deleted a movie!');
     }
 
     componentDidUpdate() {

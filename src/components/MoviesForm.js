@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
-import MoviesFormItem from './MoviesFormItem';
 import { toast } from "react-toastify";
+import MoviesFormItem from './MoviesFormItem';
 
 class MoviesForm extends Component {
     constructor(props) {

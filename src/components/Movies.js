@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import MovieItem from './MovieItem';
 import Pagination from './Pagination';
 
@@ -57,6 +58,7 @@ class Movies extends Component {
                 db
             }));
         }
+        toast.success('You successfully deleted a movie!');
     }
 
     componentDidUpdate() {
