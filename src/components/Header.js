@@ -6,7 +6,7 @@ const Header = () => {
         <div className="container d-flex justify-content-center">
             <nav className="navbar navbar-expand navbar-dark px-5 rounded">
                 <Link to="/">
-                    <img src="../assets/images/MovieManagementSmall.png" alt="logo" className="top-logo mr-2"/>
+                    <img src="../assets/images/MovieManagementSmall.png" alt="logo" className="top-logo mr-2 d-none d-md-inline-block"/>
                 </Link>
                 <Link className="navbar-brand mr-lg-5" to="/">Movie Manager</Link>
                 <div className="collapse navbar-collapse ml-5" id="navbarSupportedContent">

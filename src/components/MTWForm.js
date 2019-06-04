@@ -96,13 +96,13 @@ class MTVForm extends Component {
             <form className="mt-5" onSubmit={ this.handleForm }>
                 <div className="form-group bg-glass p-4 container">
                     <div className="row">
-                        <div className="col-10 text-center">
+                        <div className="col-8 col-md-10 text-center">
                             <label htmlFor="mtv-form__title">Title:</label>
                             <input onChange={ this.handleChangeTitle } className="form-control" id="mtv-form__title" type="text" name="title"/>
                             <small>Type the title of the movie you want to watch</small>
                         </div>
 
-                        <div className="col-2 text-center mb-2">
+                        <div className="col-4 col-md-2 text-center mb-2">
                             <label htmlFor="mtv-form__priority">Priority:</label>
                             <input onChange={ this.handleChangePriority } className="form-control text-center" id="mtv-form__priority" type="number" name="priority"/>
                             <small>1 to 10</small>

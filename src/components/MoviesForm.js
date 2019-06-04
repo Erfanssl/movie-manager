@@ -599,11 +599,11 @@ class MoviesForm extends Component {
                         </label>
                     </div>
                     <div className="text-center row">
-                        <div className="col-10">
+                        <div className="col-8 col-md-10">
                             <label htmlFor="movies-title">Title:</label>
                             <input onChange={ this.handleTitle } id="movies-title" className="form-control" type="text" value={ this.state.title.val }/>
                         </div>
-                        <div className="col-2">
+                        <div className="col-4 col-md-2">
                             <label htmlFor="movies-imdb">IMDB:</label>
                             <input onChange={ this.handleIMDB } id="movies-imdb" className="form-control text-center" type="text" value={ this.state.IMDB.val }/>
                             <small>Enter the IMDB rating</small>

@@ -5,7 +5,7 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div className="dashboard__container container d-flex flex-column justify-content-center align-items-center mt-5">
+            <div className="dashboard__container container d-flex flex-column justify-content-center align-items-center mt-4">
                 <div className="dashboard__text text-center mt-4">
                     <p className="dashboard__text--one">
                         Welcome to "Movie Manager" App
