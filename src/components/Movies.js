@@ -32,13 +32,13 @@ class Movies extends Component {
             } else {
                 document.querySelector('.no-data').classList.add('d-flex');
                 document.querySelector('.movies__table').classList.add('d-none');
-                document.querySelector('.movies__left-type').classList.add('d-none');
-            }
+                document.querySelector('.movies__left-type').classList.remove('d-flex');
+                document.querySelector('.movies__left-type').classList.add('d-none');            }
         } else {
             document.querySelector('.no-data').classList.add('d-flex');
             document.querySelector('.movies__table').classList.add('d-none');
-            document.querySelector('.movies__left-type').classList.add('d-none');
-        }
+            document.querySelector('.movies__left-type').classList.remove('d-flex');
+            document.querySelector('.movies__left-type').classList.add('d-none');        }
     }
 
     handleDelete(id, index, postsPerPage) {
@@ -61,6 +61,7 @@ class Movies extends Component {
         if (this.state.db.length === 0) {
             document.querySelector('.no-data').classList.add('d-flex');
             document.querySelector('.movies__table').classList.add('d-none');
+            document.querySelector('.movies__left-type').classList.remove('d-flex');
             document.querySelector('.movies__left-type').classList.add('d-none');
         }
     }
