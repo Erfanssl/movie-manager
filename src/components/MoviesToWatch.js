@@ -40,8 +40,8 @@ class MoviesToWatch extends Component {
     }
 
     handleDelete(id, index, postsPerPage) {
-        const mtv = this.state.db.filter(item => item.id !== id);
-        if (index === 0 && Math.ceil((this.state.db.length - 1) / postsPerPage) < this.state.currentPage ) {
+        const mtv = this.state.mtv.filter(item => item.id !== id);
+        if (index === 0 && Math.ceil((this.state.mtv.length - 1) / postsPerPage) < this.state.currentPage ) {
             this.setState((prevState) => ({
                 mtv, currentPage: prevState.currentPage - 1
             }));
