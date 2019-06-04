@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-const MTVItem = ({ id, title, priority, index, currentPage, onDelete }) => {
+const MTVItem = ({ id, title, priority, currentPage, onDelete, mtv }) => {
     const mtvBackground = () => {
-        if (index === 1 && currentPage === 1) return "bg-success";
+        if (mtv[0].id === id) return "bg-success";
     };
     return (
         <tr className={ mtvBackground() }>

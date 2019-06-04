@@ -99,13 +99,13 @@ class MoviesToWatch extends Component {
                     </tr>
                     </thead>
                     <tbody>
-                    { mtvData.map((item, index) => (
+                    { mtvData.map((item) => (
                             <MTVItem
                                 key={ item.id }
                                 id={ item.id }
                                 title={ item.title }
-                                index={ index + 1 }
                                 currentPage={ this.state.currentPage }
+                                mtv={ this.state.mtv }
                                 priority={ item.priority }
                                 onDelete={ () => this.handleDelete(item.id) }
                             />
