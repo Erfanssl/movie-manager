@@ -2,7 +2,7 @@ import React from 'react';
 
 const Documentation = () => {
     return (
-        <div className="container border border-info text-center mt-5 py-3 pt-4 rounded-lg bg-glass">
+        <div className="container border border-info text-center mt-5 py-3 px-2 pt-4 rounded-lg bg-glass">
             <p>
                 This is a very great app with lots of functionalities.
                 <br/>

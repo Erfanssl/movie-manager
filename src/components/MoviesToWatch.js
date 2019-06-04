@@ -78,7 +78,7 @@ class MoviesToWatch extends Component {
                 <Link to="/mtv-form" className="btn btn-primary mtv__btn--add-new mb-2">Add New Movie</Link>
                 <span className="ml-3 mr-2">Or Search:</span>
                 <input onChange={ this.handleSearch } type="text" className="form-control form-inline mb-2 movies-to-watch__search-box" placeholder="Search among the movies you want to watch"/>
-                <div className="no-data border border-danger rounded-lg bg-glass py-5 pt-4 d-none my-3 align-items-center justify-content-center">
+                <div className="no-data border border-danger rounded-lg bg-glass py-5 pt-4 d-none my-3 align-items-center justify-content-center text-center">
                     <p>
                         There is no movie in your "Movies To Watch" list.
                     </p>

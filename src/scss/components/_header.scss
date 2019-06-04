@@ -1,3 +1,9 @@
 .top-logo {
   width: 80px;
 }
+
+@media (max-width: 991.98px) {
+  .header__mdb {
+    width: 67px;
+  }
+}
