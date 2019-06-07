@@ -19,7 +19,7 @@ const Header = () => {
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link d-none d-md-inline-block" to="/movies-to-watch">Movies to watch</NavLink>
-                            <NavLink className="nav-link d-md-none" to="/movies-to-watch">MtV</NavLink>
+                            <NavLink className="nav-link d-md-none" to="/movies-to-watch">MtW</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link d-none d-md-inline-block" to="/top10">Top 10</NavLink>

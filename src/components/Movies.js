@@ -70,9 +70,9 @@ class Movies extends Component {
             document.querySelector('.movies__table').classList.add('d-none');
             document.querySelector('.movies__left-type').classList.remove('d-flex');
             document.querySelector('.movies__left-type').classList.add('d-none');
+            document.querySelector('.movies__search-box').classList.add('d-none');
+            document.querySelector('.movies__search-text').classList.add('d-none');
         }
-        document.querySelector('.movies__search-box').classList.add('d-none');
-        document.querySelector('.movies__search-text').classList.add('d-none');
     }
 
     handlePagination(page) {
@@ -128,32 +128,32 @@ class Movies extends Component {
                     <div className="movies__left-type col-3 d-flex justify-content-center text-center">
                         <div className="movies__left-nav pt-2 bg-glass nav flex-column nav-pills" id="v-pills-tab" role="tablist"
                              aria-orientation="vertical">
-                            <a onClick={ (e) => this.handleTypes(e,'') } className={ `nav-link ${ this.state.type === '' ? " active" : "" }` } id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                            <a onClick={ (e) => this.handleTypes(e,'') } className={ `nav-link ${ this.state.type === '' ? " active" : "" }` } id="v-pills-home-tab" data-toggle="pill" href="#"
                                role="tab" aria-controls="v-pills-home" aria-selected="true">All Movies</a>
-                            <a onClick={ (e) => this.handleTypes(e,'W') } className={ `nav-link ${ this.state.type === 'W' ? " active" : "" }` } id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                            <a onClick={ (e) => this.handleTypes(e,'W') } className={ `nav-link ${ this.state.type === 'W' ? " active" : "" }` } id="v-pills-home-tab" data-toggle="pill" href="#"
                                role="tab" aria-controls="v-pills-home" aria-selected="true">Worthless</a>
-                            <a onClick={ (e) => this.handleTypes(e,'B') } className={ `nav-link ${ this.state.type === 'B' ? " active" : "" }` } id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                            <a onClick={ (e) => this.handleTypes(e,'B') } className={ `nav-link ${ this.state.type === 'B' ? " active" : "" }` } id="v-pills-profile-tab" data-toggle="pill" href="#"
                                role="tab" aria-controls="v-pills-profile" aria-selected="false">Bad</a>
                             <a onClick={ (e) => this.handleTypes(e,'BbW') } className={ `nav-link ${ this.state.type === 'BbW' ? " active" : "" }` } id="v-pills-messages-tab" data-toggle="pill"
-                               href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
+                               href="#" role="tab" aria-controls="v-pills-messages"
                                aria-selected="false">Bad but Watchable</a>
                             <a onClick={ (e) => this.handleTypes(e,'NGbR') } className={ `nav-link ${ this.state.type === 'NGbR' ? " active" : "" }` } id="v-pills-settings-tab" data-toggle="pill"
-                               href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                               href="#" role="tab" aria-controls="v-pills-settings"
                                aria-selected="false">Not Good but Respectable</a>
                             <a onClick={ (e) => this.handleTypes(e,'G') } className={ `nav-link ${ this.state.type === 'G' ? " active" : "" }` } id="v-pills-settings-tab" data-toggle="pill"
-                               href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                               href="#" role="tab" aria-controls="v-pills-settings"
                                aria-selected="false">Good</a>
                             <a onClick={ (e) => this.handleTypes(e,'VG') } className={ `nav-link ${ this.state.type === 'VG' ? " active" : "" }` } id="v-pills-settings-tab" data-toggle="pill"
-                               href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                               href="#" role="tab" aria-controls="v-pills-settings"
                                aria-selected="false">Very Good</a>
                             <a onClick={ (e) => this.handleTypes(e,'E') } className={ `nav-link ${ this.state.type === 'E' ? " active" : "" }` } id="v-pills-settings-tab" data-toggle="pill"
-                               href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                               href="#" role="tab" aria-controls="v-pills-settings"
                                aria-selected="false">Excellent</a>
                             <a onClick={ (e) => this.handleTypes(e,'M') } className={ `nav-link ${ this.state.type === 'M' ? " active" : "" }` } id="v-pills-settings-tab" data-toggle="pill"
-                               href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                               href="#" role="tab" aria-controls="v-pills-settings"
                                aria-selected="false">Masterpiece</a>
                             <a onClick={ (e) => this.handleTypes(e,'L') } className={ `nav-link ${ this.state.type === 'L' ? " active" : "" }` } id="v-pills-settings-tab" data-toggle="pill"
-                               href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                               href="#" role="tab" aria-controls="v-pills-settings"
                                aria-selected="false">Legendary</a>
                         </div>
                     </div>
